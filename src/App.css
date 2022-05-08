@@ -56,6 +56,17 @@ tr {
   width: 18rem;
 }
 .header {
-  width: 50px;
+  background-color: #222;
   height: 50px;
+}
+.App-header {
+  width: 50pxpx;
+  background-color: #222;
+}
+.headerOne {
+  display: flex;
+  background-color: #222;
+}
+.footer {
+  text-align: left;
 }

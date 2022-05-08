@@ -10,11 +10,13 @@ import React from "react";
 const Footer = props => {
   return (
     <div className="footer">
-      <ul>
-        {props.footerData.map(item => {
-          return <li>{item}</li>;
-        })}
-      </ul>
+      <footer>
+        <ul>
+          {props.array.map(item => {
+            return <li>{item}</li>;
+          })}
+        </ul>
+      </footer>
     </div>
   );
 };

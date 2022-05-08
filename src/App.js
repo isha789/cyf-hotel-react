@@ -17,8 +17,13 @@ const App = () => {
       <Heading />
       <TouristInfoCards />
       <Bookings />
-
-      <Footer footerData={footerData} />
+      <Footer
+        array={[
+          "123 Fake Street, London, E1 4UD",
+          "hello@fakehotel.com",
+          "0123 456789"
+        ]}
+      />
     </div>
   );
 };
