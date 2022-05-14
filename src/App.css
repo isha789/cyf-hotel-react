@@ -70,3 +70,6 @@ tr {
 .footer {
   text-align: left;
 }
+.highlight {
+  background-color: coral;
+}

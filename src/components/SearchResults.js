@@ -1,14 +1,14 @@
-import React from "react";
-import fakeBookings from "../data/fakeBookings";
-import moment from "moment";
-console.log(fakeBookings);
+import React, { useState } from "react";
+import Row from "./Row";
+// import moment from "moment";
+//console.log(fakeBookings)
 
 //import Customer from "./Customer";
 //import FakeBookings from "../data/fakeBookings.json";
 //const results = { FakeBookings };
 //console.log(results.FakeBookings);
 
-const SearchResults = () => {
+const SearchResults = props => {
   return (
     <table class="table">
       <thead>
@@ -26,24 +26,8 @@ const SearchResults = () => {
       </thead>
 
       <tbody>
-        {fakeBookings.map(booking => {
-          const checkIn = moment(booking.checkInDate);
-          const checkOut = moment(booking.checkOutDate);
-          const nightsCalculation = checkOut.diff(checkIn, "days");
-          return (
-            <tr>
-              <td>{booking.id}</td>
-              <td>{booking.title}</td>
-              <td>{booking.firstName}</td>
-              <td>{booking.surname}</td>
-              <td>{booking.email}</td>
-              <td>{booking.roomId}</td>
-              <td>{booking.checkInDate}</td>
-              <td>{booking.checkOutDate}</td>
-
-              <td>{nightsCalculation}</td>
-            </tr>
-          );
+        {props.results.map(booking => {
+          return <Row booking={booking} />;
         })}
       </tbody>
     </table>

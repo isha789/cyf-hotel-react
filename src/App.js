@@ -1,6 +1,7 @@
 import React from "react";
 import Heading from "./components/Heading";
 import Bookings from "./components/Bookings";
+import Restaurant from "./components/Restaurant";
 import TouristInfoCards from "./components/TouristInfoCards";
 import Footer from "./components/Footer";
 
@@ -17,6 +18,7 @@ const App = () => {
       <Heading />
       <TouristInfoCards />
       <Bookings />
+      <Restaurant />
       <Footer
         array={[
           "123 Fake Street, London, E1 4UD",
