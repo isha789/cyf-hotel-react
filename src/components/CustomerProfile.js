@@ -4,8 +4,8 @@ const CustomerProfile = ({ id }) => {
   const [customerInfo, setCustomerInfo] = useState(null);
   useEffect(() => {
     if (id > 0) {
-      //fetch(`https://cyf-react.glitch.me/customers/${id} `)
-      fetch(`https://cyf-react.glitch.me/delayed `)
+      // fetch(`https://cyf-react.glitch.me/customers/${id} `)
+      fetch(`https://cyf-react.glitch.me/delayed`)
         .then(response => response.json())
         .then(data => setCustomerInfo(data));
     }

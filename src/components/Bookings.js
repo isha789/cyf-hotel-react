@@ -7,10 +7,18 @@ const Bookings = () => {
   const [bookings, setBookings] = useState([]);
   useEffect(() => {
     //console.log("page is loading")
-    fetch(`https://cyf-react.glitch.me`)
-      .then(res => res.json())
+    fetch(`https://cyf-react.glitch.me/error`)
+      .then(res => {
+        if (res.status != 200) {
+          alert("sorry there was an error with the data");
+        }
+        return res.json();
+      })
       .then(data => {
         setBookings(data);
+      })
+      .catch(error => {
+        console.log(error);
       });
   }, []);
   const search = searchVal => {
